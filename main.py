@@ -13,7 +13,7 @@ import ifcopenshell.util
 import ifcopenshell.util.element
 import json
 
-ifcPath = open(r".\file.txt","rt",encoding='utf-8').read()
+ifcPath = open(r"C:\CNVSW\CnvApp\IfcStructureLight\file.txt","rt").read()
 model = ifcopenshell.open(ifcPath)
 ifcValue = open(ifcPath).read().encode('utf-8')
 
