@@ -9,7 +9,6 @@ import streamlit.components.v1 as components
 import ifcopenshell.util.element as util
 import pandas as pd
 import numpy as np
-from streamlit_tree_select import tree_select
 import ifcopenshell.util
 import ifcopenshell.util.element
 import json
