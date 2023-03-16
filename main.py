@@ -9,6 +9,7 @@ import os
 import clipboard
 
 uploaded_file_ifc = st.sidebar.file_uploader("IFC Load",type=['ifc'],key="uploaded_file")
+
 ifcValue = uploaded_file_ifc.getvalue()
 # ifcPath = clipboard.paste()
 # model = ifcopenshell.open(ifcPath)
@@ -38,8 +39,9 @@ session["ifc_js_response"] = ""
 #세션#################
 
 
+if uploaded_file_ifc is not None:
 
-session.ifc_js_response = ifc_js_viewer(ifcValue)
+    session.ifc_js_response = ifc_js_viewer(ifcValue)
+else:
+    st.write("IFC파일을 로드하세요")
 
-
-os.system("pause")
