@@ -1,19 +1,13 @@
 import streamlit as st
-#from tools import ifchelper
-import json
 import ifcopenshell
 from pathlib import Path                                                    
-from re import L                                                            
 from typing import Optional                                                 
 import streamlit.components.v1 as components    
-import ifcopenshell.util.element as util
-import pandas as pd
-import numpy as np
 import ifcopenshell.util
 import ifcopenshell.util.element
-import json
-
-ifcPath = open(r"C:\CNVSW\CnvApp\IfcStructureLight\file.txt","rt").read()
+import os
+import clipboard
+ifcPath = clipboard.paste()
 model = ifcopenshell.open(ifcPath)
 ifcValue = open(ifcPath).read().encode('utf-8')
 
@@ -45,3 +39,4 @@ session["ifc_js_response"] = ""
 session.ifc_js_response = ifc_js_viewer(ifcValue)
 
 
+os.system("pause")
