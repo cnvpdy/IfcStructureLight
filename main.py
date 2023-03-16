@@ -7,9 +7,12 @@ import ifcopenshell.util
 import ifcopenshell.util.element
 import os
 import clipboard
-ifcPath = clipboard.paste()
-model = ifcopenshell.open(ifcPath)
-ifcValue = open(ifcPath).read().encode('utf-8')
+
+uploaded_file_ifc = st.sidebar.file_uploader("IFC Load",type=['ifc'],key="uploaded_file")
+ifcValue = uploaded_file_ifc.getvalue()
+# ifcPath = clipboard.paste()
+# model = ifcopenshell.open(ifcPath)
+# ifcValue = open(ifcPath).read().encode('utf-8')
 
 
 
